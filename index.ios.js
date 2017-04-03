@@ -6,7 +6,7 @@
 
  import React, { Component } from 'react';
  import { AppRegistry } from 'react-native';
- import SearchResultView from './app/SearchResultView';
+ import SearchResultView from './src';
 
  export default class SocialSearch extends Component {
    render() {
