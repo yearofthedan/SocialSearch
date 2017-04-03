@@ -30,7 +30,10 @@ describe('<SearchResultView>', () => {
   });
 
   it('renders an entry for each tweet returned', (done) => {
-    getTweets.mockReturnValue(Promise.resolve([{ text: '123' }, { text: '456' }]));
+    getTweets.mockReturnValue(Promise.resolve([
+      { id: '123', text: '123' },
+      { id: '456', text: '456' },
+    ]));
 
     const rendered = shallow(<SearchResultView />);
     asyncTestHelper(() => {

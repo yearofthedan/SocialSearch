@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
+import HeadingText from './HeadingText';
 import { SEARCH_TERM, getTweets } from './api';
 
 class SearchResultView extends Component {
@@ -25,7 +26,7 @@ class SearchResultView extends Component {
     return (
       <View style={{ flex: 1, marginTop: 20 }}>
         <View>
-          <Text>Results for {`#${SEARCH_TERM}`}</Text>
+          <HeadingText>Results for {`#${SEARCH_TERM}`}</HeadingText>
         </View>
         <View style={{ flex: 1, marginTop: 20 }}>
           { this.state.error
