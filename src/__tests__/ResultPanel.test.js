@@ -16,7 +16,7 @@ describe('<ResultPanel>', () => {
           { id: '2', text: '456' },
         ]}
       />);
-    const tweets = rendered.find('Text');
+    const tweets = rendered.find('Body1Text');
     expect(tweets.children().length).toBe(2);
     expect(tweets.at(0).props().children).toContain('123');
     expect(tweets.at(1).props().children).toContain('456');
@@ -27,7 +27,7 @@ describe('<ResultPanel>', () => {
       <ResultPanel
         error="There was an error"
       />);
-    const error = rendered.find('Text');
+    const error = rendered.find('ErrorText');
     expect(error.props().children).toContain('There was an error');
   });
 });

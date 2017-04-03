@@ -1,10 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
-import HeadingText from './HeadingText';
+import { HeadlineText } from './common';
 
 const Header = ({ children, ...props }) => (
-  <View {...props}>
-    <HeadingText>{children}</HeadingText>
+  <View style={{ height: 50, justifyContent: 'center' }} {...props}>
+    <HeadlineText>{children}</HeadlineText>
   </View>
 );
 

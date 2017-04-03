@@ -1,1 +1,2 @@
-export { default as StretchFlex } from './StretchFlex';
+export * from './layout';
+export * from './styledText';
