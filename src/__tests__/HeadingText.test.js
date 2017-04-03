@@ -10,6 +10,6 @@ describe('<HeadingText>', () => {
 
   it('passes any props through to the underlying text component', () => {
     const rendered = shallow(<HeadingText someProp />);
-    expect(rendered.find('Text').prop('someProp')).not.toBeNull();
+    expect(rendered.find('Text').prop('someProp')).toBe(true);
   });
 });
