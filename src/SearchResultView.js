@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { SEARCH_TERM, getTweets } from './api';
 import Header from './Header';
+import ResultPanel from './ResultPanel';
 
 class SearchResultView extends Component {
 
@@ -28,12 +29,10 @@ class SearchResultView extends Component {
         <Header>
           Results for {`#${SEARCH_TERM}`}
         </Header>
-        <View style={{ flex: 1, marginTop: 20 }}>
-          { this.state.error
-            ? <Text>{this.state.error}</Text>
-            : this.state.tweets.map(tweet => <Text key={tweet.id} >{tweet.text}</Text>)
-           }
-        </View>
+        <ResultPanel
+          error={this.state.error}
+          tweets={this.state.tweets}
+        />
       </View>
     );
   }

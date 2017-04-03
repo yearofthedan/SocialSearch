@@ -17,29 +17,28 @@ describe('<SearchResultView>', () => {
     expect(rendered.type()).not.toBeNull();
   });
 
-  it('shows an error when there is an error', (done) => {
+  it('passes any errors to the result panel', (done) => {
     getTweets.mockReturnValue(Promise.reject({ message: 'something' }));
 
     const rendered = shallow(<SearchResultView />);
     asyncTestHelper(() => {
-      const results = rendered.find('View');
-      const error = results.find('Text');
-      expect(error.props().children).toContain('there was an error connecting to Twitter');
+      const resultPanel = rendered.find('ResultPanel');
+      expect(resultPanel.prop('error')).toContain('there was an error connecting to Twitter');
       done();
     });
   });
 
-  it('renders an entry for each tweet returned', (done) => {
-    getTweets.mockReturnValue(Promise.resolve([
+  it('passes any tweets to the result panel', (done) => {
+    const tweets = [
       { id: '123', text: '123' },
       { id: '456', text: '456' },
-    ]));
+    ];
+    getTweets.mockReturnValue(Promise.resolve(tweets));
 
     const rendered = shallow(<SearchResultView />);
     asyncTestHelper(() => {
-      const results = rendered.find('View');
-      const tweets = results.find('Text');
-      expect(tweets.children().length).toBe(2);
+      const resultPanel = rendered.find('ResultPanel');
+      expect(resultPanel.prop('tweets')).toEqual(tweets);
       done();
     });
   });
