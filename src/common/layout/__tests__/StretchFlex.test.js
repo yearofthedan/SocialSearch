@@ -10,11 +10,6 @@ describe('<StretchFlex>', () => {
 
   it('appends additional styles', () => {
     const rendered = shallow(<StretchFlex style={{ borderWidth: 10 }} />);
-    expect(rendered.find('View').prop('style')).toEqual({ alignItems: 'stretch', borderWidth: 10, flex: 1 });
-  });
-
-  it('passes any props through to the underlying view component', () => {
-    const rendered = shallow(<StretchFlex someProp />);
-    expect(rendered.find('View').prop('someProp')).toBe(true);
+    expect(rendered.find('View').prop('style')[1]).toEqual({ borderWidth: 10 });
   });
 });

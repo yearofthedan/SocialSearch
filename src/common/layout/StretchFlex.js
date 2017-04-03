@@ -1,8 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
 
-const StretchFlex = ({ children, style, ...props }) => (
-  <View style={{ flex: 1, alignItems: 'stretch', ...style }} {...props}>
+const StretchFlex = ({ children, style }) => (
+  <View style={[{ flex: 1, alignItems: 'stretch' }, style]}>
     { children }
   </View>
 
