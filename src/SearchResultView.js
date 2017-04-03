@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { StretchFlex } from './common';
 import { SEARCH_TERM, getTweets } from './api';
 import Header from './Header';
 import ResultPanel from './ResultPanel';
@@ -25,7 +25,7 @@ class SearchResultView extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, marginTop: 20 }}>
+      <StretchFlex>
         <Header>
           Results for {`#${SEARCH_TERM}`}
         </Header>
@@ -33,7 +33,7 @@ class SearchResultView extends Component {
           error={this.state.error}
           tweets={this.state.tweets}
         />
-      </View>
+      </StretchFlex>
     );
   }
 }

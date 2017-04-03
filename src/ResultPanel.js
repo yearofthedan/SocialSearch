@@ -1,13 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+import { StretchFlex } from './common';
 
 const ResultPanel = ({ error, tweets, ...props }) => (
-  <View style={{ flex: 1, marginTop: 20 }} {...props}>
+  <StretchFlex {...props}>
     { error
       ? <Text>{error}</Text>
       : tweets.map(tweet => <Text key={tweet.id} >{tweet.text}</Text>)
      }
-  </View>
+  </StretchFlex>
 );
 
 export default ResultPanel;
