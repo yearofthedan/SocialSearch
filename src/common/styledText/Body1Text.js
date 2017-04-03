@@ -1,10 +1,11 @@
 import React from 'react';
 import { Text } from 'react-native';
+import { colours } from '../styleConstants';
 
 const Body1Text = ({ style, children, ...props }) => (
   <Text
     {...props}
-    style={[style, { fontSize: 14, fontFamily: 'sans-serif' }]}
+    style={[style, { color: colours.textPrimary, fontSize: 14, fontFamily: 'sans-serif' }]}
   >{children}</Text>
 );
 

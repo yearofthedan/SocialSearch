@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
+import { colours } from '../styleConstants';
 
 const TitleText = ({ style, children, ...props }) => (
   <Text

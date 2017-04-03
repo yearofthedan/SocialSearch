@@ -9,17 +9,18 @@ describe('<ResultPanel>', () => {
   });
 
   it('renders an entry for each tweet', () => {
+    const data = [
+      { id: '1', text: '123' },
+      { id: '2', text: '456' },
+    ];
     const rendered = shallow(
       <ResultPanel
-        tweets={[
-          { id: '1', text: '123' },
-          { id: '2', text: '456' },
-        ]}
+        tweets={data}
       />);
-    const tweets = rendered.find('Body1Text');
-    expect(tweets.children().length).toBe(2);
-    expect(tweets.at(0).props().children).toContain('123');
-    expect(tweets.at(1).props().children).toContain('456');
+    const tweets = rendered.find('Tweet');
+    expect(tweets.length).toBe(2);
+    expect(tweets.at(0).prop('tweet')).toEqual(data[0]);
+    expect(tweets.at(1).prop('tweet')).toEqual(data[1]);
   });
 
   it('shows an error when there is an error', () => {

@@ -1,6 +1,6 @@
 import Config from 'react-native-config';
 
-export const SEARCH_TERM = 'ThoughtWorks';
+export const SEARCH_TERM = 'ReactNative';
 
 const parseResponse = async (response) => {
   const json = await response.json();
