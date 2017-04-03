@@ -22,7 +22,7 @@ describe('<SearchResultView>', () => {
 
     const rendered = shallow(<SearchResultView />);
     asyncTestHelper(() => {
-      const results = rendered.find('View').at(2);
+      const results = rendered.find('View');
       const error = results.find('Text');
       expect(error.props().children).toContain('there was an error connecting to Twitter');
       done();
@@ -37,7 +37,7 @@ describe('<SearchResultView>', () => {
 
     const rendered = shallow(<SearchResultView />);
     asyncTestHelper(() => {
-      const results = rendered.find('View').at(2);
+      const results = rendered.find('View');
       const tweets = results.find('Text');
       expect(tweets.children().length).toBe(2);
       done();
