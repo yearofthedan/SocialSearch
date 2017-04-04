@@ -1,6 +1,6 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Body1Text, TitleText, SpacedBetweenRow } from './common';
+import { View, Image } from 'react-native';
+import { Body1Text, TitleText, SpacedBetweenRow, Centered } from './common';
 
 const formatDate = date => new Date(date).toDateString();
 
@@ -17,11 +17,14 @@ const ContentRow = ({ tweet }) => (
   </View>
 );
 
-const Avatar = () => <View style={{ width: 100 }} />;
+const Avatar = ({ tweet }) => <Centered style={{ width: 100 }}><Image
+  style={{ width: 50, height: 50 }}
+  source={{ uri: tweet.user.profile_image_url }}
+/></Centered>;
 
 const Tweet = ({ tweet }) => (
   <SpacedBetweenRow style={{ height: 100, width: 540, padding: 12 }}>
-    <Avatar />
+    <Avatar tweet={tweet} />
     <View style={{ width: 400 }}>
       <DetailsRow tweet={tweet} />
       <ContentRow tweet={tweet} />
