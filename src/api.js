@@ -25,7 +25,7 @@ const getTwitterBearerToken = async () => {
 
 export const getTweets = async () => {
   const bearerToken = await getTwitterBearerToken();
-  const response = await fetch(`${Config.TWITTER_API_HOST}/1.1/search/tweets.json?q=%23${SEARCH_TERM}`, {
+  const response = await fetch(`${Config.TWITTER_API_HOST}/1.1/search/tweets.json?count=100&result_type=recent&q=%23${SEARCH_TERM}`, {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${bearerToken}`,

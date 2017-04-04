@@ -1,9 +1,9 @@
 const baseColors = {
   red: '#b90000ff',
-  black: '#2a0000ff',
-  blue: '#4097d5cc',
-  yellow: '#d1d505e8',
-  grey: '#dddddddd',
+  black: '#1d0101ff',
+  blue: '#66bfffcc',
+  yellow: '#eef21ee8',
+  grey: '#e4dfdfdd',
 };
 
 export const colours = {
