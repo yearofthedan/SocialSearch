@@ -1,10 +1,10 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import TweetList from '../TweetList';
 
 describe('<TweetList>', () => {
   it('renders the component', () => {
-    const rendered = mount(<TweetList tweets={[]} />);
+    const rendered = shallow(<TweetList tweets={[]} />);
     expect(rendered.type()).not.toBeNull();
   });
 

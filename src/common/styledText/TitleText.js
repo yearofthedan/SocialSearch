@@ -5,7 +5,7 @@ import { colours } from '../styleConstants';
 const TitleText = ({ style, children, ...props }) => (
   <Text
     {...props}
-    style={[style, { fontSize: 20, fontFamily: 'sans-serif-medium' }]}
+    style={[style, { color: colours.textAlternative, fontSize: 20, fontFamily: 'sans-serif-medium' }]}
   >{children}</Text>
 );
 
