@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { HeadlineText } from './common';
+import { HeadlineText } from '../common';
 
 const Header = ({ children }) => (
   <View style={{ height: 60, justifyContent: 'center' }}>

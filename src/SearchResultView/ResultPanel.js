@@ -1,5 +1,5 @@
 import React from 'react';
-import { ErrorText, StretchFlex } from './common';
+import { ErrorText, StretchFlex } from '../common';
 import TweetList from './TweetList';
 
 const ResultPanel = ({ error, tweets }) => (

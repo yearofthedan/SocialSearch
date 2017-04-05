@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ContentPanel } from './common';
+import { ContentPanel } from '../common';
 import { SEARCH_TERM, getTweets } from './api';
 import Header from './Header';
 import ResultPanel from './ResultPanel';

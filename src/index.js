@@ -1,1 +1,1 @@
-export { default } from './SearchResultView';
+export { default } from './App';

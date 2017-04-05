@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image } from 'react-native';
-import { Body1Text, Body2Text, SpacedBetweenRow, Centered } from './common';
-import { spacing } from './common/styleConstants';
+import { Body1Text, Body2Text, SpacedBetweenRow, Centered } from '../common';
+import { spacing } from '../common/styleConstants';
 
 const formatDate = date => new Date(date).toDateString();
 
