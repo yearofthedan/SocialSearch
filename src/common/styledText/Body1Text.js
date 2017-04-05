@@ -5,7 +5,7 @@ import { colours } from '../styleConstants';
 const Body1Text = ({ style, children, ...props }) => (
   <Text
     {...props}
-    style={[style, { color: colours.textPrimary, fontSize: 14, fontFamily: 'sans-serif' }]}
+    style={[style, { color: colours.textPrimary, fontSize: 14, fontFamily: 'Roboto-Regular' }]}
   >{children}</Text>
 );
 
